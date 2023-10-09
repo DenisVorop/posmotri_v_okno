@@ -1,6 +1,7 @@
 .content {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  align-items: end;
   gap: 30px;
   margin: 133px 0;
 }
@@ -8,18 +9,19 @@
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
+  gap: 18px;
 }
 
 .result__video-container {
   position: relative;
+  height: 386px;
 }
 
 .result__video {
   width: 100%;
   height: 386px;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -31,11 +33,8 @@
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.search-form__fieldset-title {
-  line-height: 90%;
+  justify-content: end;
+  gap: 5px;
 }
 
 .search-form__label {
@@ -55,7 +54,7 @@
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   width: 225px;
-  height: 27px;
+  height: 25px;
 }
 
 .search-form__textfield:focus {
@@ -72,7 +71,7 @@
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 19px;
   height: 19px;
@@ -94,7 +93,7 @@
   border: 1px solid #fff;
   font-weight: 700;
   width: 194px;
-  height: 34px;
+  min-height: 32px;
 }
 
 .button:hover {
@@ -116,11 +115,11 @@
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, "Fira Sans Condensed", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -135,7 +134,7 @@
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 26px;
   height: 298px;
   overflow-y: auto;
   position: relative;
@@ -144,6 +143,10 @@
 .content__card-link {
   display: block;
   margin: 2px;
+}
+
+.content__card-link:active {
+  background: #545050;
 }
 
 .content__card-link:hover {
@@ -172,8 +175,12 @@
   flex: 1;
 }
 
+.content__video-card-description {
+  line-height: 90%;
+}
+
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, "Fira Sans Condensed", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -182,9 +189,10 @@
 }
 
 .content__video-card-thumbnail {
-  width: 195px;
-  height: 101px;
+  width: 192px;
+  height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .more-button {

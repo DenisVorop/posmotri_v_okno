@@ -75,7 +75,8 @@ footer,
 header,
 section,
 legend,
-main {
+main,
+video {
   display: block;
 }
 
